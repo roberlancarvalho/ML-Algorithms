@@ -1,7 +1,6 @@
 from sklearn.svm import SVC
 import numpy as np
 
-# Dados já reduzidos para 2 componentes
 X_pca = np.array([
     [1.0, 2.0],
     [1.5, 2.5],
@@ -13,7 +12,6 @@ X_pca = np.array([
     [4.2, 1.2]
 ])
 
-# 1 = marcha independente, 0 = marcha assistida
 y = np.array([1, 1, 1, 1, 0, 0, 0, 0])
 
 modelo_svm = SVC(kernel="rbf", C=1.0, gamma="scale")
