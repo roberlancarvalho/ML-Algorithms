@@ -1,6 +1,7 @@
 from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 
+# Dados: [Idade, Score Motor, Sensibilidade]
 X = np.array([
     [25, 40, 1],
     [70, 10, 0],
@@ -11,6 +12,7 @@ X = np.array([
     [38, 28, 1]
 ])
 
+# Classe alvo
 y = np.array([1, 0, 1, 1, 0, 0, 1])
 
 modelo = DecisionTreeClassifier(max_depth=2, random_state=42)

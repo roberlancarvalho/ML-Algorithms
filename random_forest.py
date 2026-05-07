@@ -11,12 +11,13 @@ X = [
     [38, 28, 1]
 ]
 
+# Classe alvo
 y = [1, 0, 1, 1, 0, 0, 1]
 
 floresta = RandomForestClassifier(n_estimators=100, random_state=42)
 floresta.fit(X, y)
 
-novo_paciente = [[50, 35, 1]]
+novo_paciente = [[90, 35, 0]]
 previsao = floresta.predict(novo_paciente)
 prognostico = "Recuperação Alta" if previsao[0] == 1 else "Recuperação Baixa"
 

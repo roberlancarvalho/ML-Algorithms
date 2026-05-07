@@ -22,9 +22,11 @@ params = {
     "eval_metric": "auc"
 }
 
+
+# Treinamento do modelo
 bst = xgb.train(params, dtrain, num_boost_round=20)
 
-novo = np.array([[50, 35, 1]])
+novo = np.array([[50, 35, 0]])
 prob = bst.predict(xgb.DMatrix(novo))
 
 print(f"Probabilidade de Recuperação Alta: {prob[0]:.2%}")
